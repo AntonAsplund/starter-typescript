@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+  background-color: #5a616e;
+  border: 3px solid #666;
+  border-radius: 4px;
+  width: fit-content;
+  margin: 15px;
+  border-radius: 5px;
 }
 
 .App-header {
@@ -20,12 +26,13 @@
   border-radius: 4px;
   height: 54px;
   max-width: 320px;
-  margin: 10px;
+  margin: 10px 10px 20px 10px;
   color: #666;
   font-size: 36px;
   padding: 6px 10px;
   text-align: right;
   line-height: 36px;
+  display: block;
 }
 
 .info {
@@ -42,5 +49,71 @@
 .App-link {
   color: #61dafb;
 }
+
+.btn {
+  cursor: pointer;
+  display: block;
+  border: 3px solid #666;
+  border-radius: 4px;
+  color: #666;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.numpad {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1;
+  align-content: center;
+  justify-content: center;
+  max-width: 320px;
+  margin: 10px 10px 20px 10px;
+}
+
+.operatorNumpad {
+  position: relative;
+  display: flex;
+  flex: 1 1;
+  align-content: center;
+  justify-content: center;
+  max-width: 100%;
+  margin: 10px 26px;
+}
+
+.operatorBtn {
+  width: 100%;
+}
+
+.numberBtn {
+  min-width: 90px;
+  margin: 5px;
+}
+
+.lightChargerWrapper {
+  margin: 10px 10px 0px 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lightChargerCellWrapper {
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 3px;
+  display: flex;
+}
+
+.lightChargerCell {
+  
+  background-color: rgb(27, 16, 16);
+  width: 30px;
+  height: 30px;
+  margin: 1px;
+  border-radius: 3px;
+}
+
+
 
 
