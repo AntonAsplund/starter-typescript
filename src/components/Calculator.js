@@ -9,14 +9,22 @@ function Calculator() {
     const [counter, setCounter] = useState('');
     const [operator, setOperator] = useState('');
     const [oldValue, setOldValue] = useState('');
+    const [operatorClicked, setOperatorClicked] = useState(false);
 
     const handleClick = (number) => {
-        setCounter(counter + number)
+        if (!operatorClicked) {
+            setCounter(counter + String(number))
+        } else {
+            setOperatorClicked(false);
+            setCounter('');
+            setCounter(number);
+        }
     };
 
     const handleClickReset = () => setCounter('');
 
     const handleOperatorClickChoice = (stringOperator) => {
+        setOperatorClicked(true);
         setOperator(stringOperator);
         if (counter) {
             setOldValue(counter);
