@@ -17,22 +17,21 @@ function Calculator() {
     const handleClickReset = () => setCounter('');
 
     const handleOperatorClickChoice = (stringOperator) => {
-        console.log(stringOperator);
         setOperator(stringOperator);
-        setOldValue(counter);
-        setCounter('');
+        if (counter) {
+            setOldValue(counter);
+        } else {
+            setCounter('');
+        }        
     };
 
     const handleCalculateValue = () => {
         if (operator && counter ) {
-            console.log(operator);
-            console.log(counter);
             const result = applyOperatorAndReturnValue(operator, oldValue, counter);
             setOldValue(String(result));
             setCounter(String(result));
         } else {
             setCounter('');
-            console.log('Counter reset');
         } 
     };
 
